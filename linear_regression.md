@@ -2,16 +2,16 @@
 
 ## 线性回归的原理
 * 线性回归试图学得一个通过属性的线性组合来进行预测的函数。
-* 有数据集$\{(x_1,y_1),(x_2,y_2),...,(x_n,y_n)\}$,其中,$x_i = (x_{i1};x_{i2};x_{i3};...;x_{id}),y_i\in R$<br> 其中n表示变量的数量，d表示每个变量的维度。  
+* 有数据集$$\{(x_1,y_1),(x_2,y_2),...,(x_n,y_n)\}$$,其中,$$x_i = (x_{i1};x_{i2};x_{i3};...;x_{id}),y_i\in R$$<br> 其中n表示变量的数量，d表示每个变量的维度。  
 * 可以用以下函数来描述y和x之间的关系：
-    $f(x) = \sum_{i=0}^{d}\theta_ix_i$
-* 即我们要通过对数据的学习，得到参数$\theta$
+    $$f(x) = \sum_{i=0}^{d}\theta_ix_i$$
+* 即我们要通过对数据的学习，得到参数$$\theta$$
 
 ## 线性回归损失函数、代价函数、目标函数
 * 损失函数(Loss Function)：度量单样本预测的错误程度，损失函数值越小，模型就越好。
 * 代价函数(Cost Function)：度量全部样本集的平均误差。
 * 目标函数(Object Function)：代价函数和正则化函数，最终要优化的函数。在本问题中为
-$\underset{f\in F}{min}\, \frac{1}{n}\sum^{n}_{i=1}L(y_i,f(x_i))+\lambda J(F)$
+$$\underset{f\in F}{min}\, \frac{1}{n}\sum^{n}_{i=1}L(y_i,f(x_i))+\lambda J(F)$$
 
 ## 最小二乘法
 * 是一种数学优化技术。它通过最小化误差的平方和寻找数据的最佳函数匹配
@@ -77,7 +77,7 @@ def r2_score(y_true, y_predict):
 * 注
 MSE、RMSE、MAE无法消除量纲不一致而导致的误差值差别大的问题，回归模型可以成功解释的数据方差部分在数据固有方差中所占的比例，越接近1，表示可解释力度越大，模型拟合的效果越好。
 
-* [sklearn.linear_model.LinearRegression详解](https://blog.csdn.net/weixin_39175124/article/details/79465558)
+## [sklearn.linear_model.LinearRegression详解](https://blog.csdn.net/weixin_39175124/article/details/79465558)
 ``` python
 lr = LinearRegression(fit_intercept=True)
 # 训练模型
